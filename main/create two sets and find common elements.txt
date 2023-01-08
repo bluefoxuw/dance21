@@ -1,0 +1,15 @@
+//Write a program to create two sets and find common elements between them
+
+object asdasd{
+  def main(args:Array[String])={
+    println("Program to create two sets and find common elements between them")
+    val set1 = Set(1, 2, 3, 4, 5, 6)
+    val set2 = Set(4, 5, 6, 7, 8, 9)
+
+    val commonElements = set1.intersect(set2)
+
+    println(s"Set 1: $set1")
+    println(s"Set 2: $set2")
+    println(s"Common elements: $commonElements")
+  }
+}

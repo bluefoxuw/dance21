@@ -1,0 +1,14 @@
+//Write a program to display largest and smallest element of a set
+object asdasd{
+  def main(args: Array[String])={
+    println("Program to display largest and smallest element of a set")
+    val set = Set(4, 5, 16, 45, 77, 389, 99, 1)
+
+    val min = set.min
+    val max = set.max
+
+    println(s"Set: $set")
+    println(s"Minimum element: $min")
+    println(s"Maximum element: $max")
+  }
+}

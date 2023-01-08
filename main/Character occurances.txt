@@ -1,0 +1,20 @@
+//Write a program to read a character from user and count the number of occurences of that character
+import scala.io.StdIn.readChar
+import scala.io.StdIn.readLine
+
+object Main {
+  def main(args: Array[String]) ={
+    println("Program to read a character from user and count the number of occurences of that character")
+    println("NOTE : It is Case Sensitive i.e. A != a")
+
+    print("Enter a character: ")
+    val char = readChar()
+
+    print("Enter a string: ")
+    val input = readLine()
+
+    val count = input.count(_ == char)
+
+    println(s"Number of occurrences of '$char': $count")
+  }
+}

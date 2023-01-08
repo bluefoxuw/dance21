@@ -1,0 +1,44 @@
+//Define a class CurrentAccount(accNo, name, balance, minBalance).Define appropriate constructors and operations withdraw(), deposit(), viewBalance(). create an object and perform actions
+import scala.io.StdIn.readLine
+import scala.io.StdIn.readInt
+class CurrentAccount(val accNo: String, val name: String, var balance: Int, val minBalance: Int) {
+  def withdraw(amount: Int): Unit = {
+    if (balance - amount >= minBalance) {
+      balance -= amount
+      println(s"Withdrew $amount. New balance: $balance")
+    } else {
+      println(s"Insufficient balance. Minimum balance should be maintained: $minBalance")
+    }
+  }
+
+  def deposit(amount: Int): Unit = {
+    balance += amount
+    println(s"Deposited $amount. New balance: $balance")
+  }
+
+  def viewBalance(): Unit = {
+    println(s"Acc No: $accNo\nName: $name\nBalance: $balance")
+  }
+}
+
+object Main {
+  def main(args: Array[String])={
+    println("Creating class CurrentAccount(accNo, name, balance, minbalance) with operations withdraw,deposit,viewbalance")
+
+    println("Enter details: ")
+    print("Enter AccNo : ")
+    val accNo = readLine()
+    print("Enter Name : ")
+    val name = readLine()
+    print("Enter Balance : ")
+    val bal = readInt()
+    println("Minimum Balance is set to 1000")
+    val account = new CurrentAccount(accNo, name, bal, 1000)
+    account.viewBalance()
+    account.withdraw(200)
+    account.deposit(1000)
+    account.viewBalance()
+    account.withdraw(500)
+    account.viewBalance()
+  }
+}

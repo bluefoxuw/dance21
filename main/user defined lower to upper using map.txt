@@ -1,0 +1,9 @@
+object asdasd{
+  def main(args:Array[String])={
+    val lowercaseLetters = List('a', 'y', 'k', 'd', 'l')
+    val uppercaseLetters = lowercaseLetters.map(toUppercase)
+    println(s"Lowercase letters: $lowercaseLetters")
+    println(s"Uppercase letters: $uppercaseLetters")
+  }
+  def toUppercase(c: Char): Char = c.toUpper
+}

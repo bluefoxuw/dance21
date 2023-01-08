@@ -1,0 +1,14 @@
+//Write a program to create map with Rollno and FirstName. Print all student info with same FirstName
+object asdsasd{
+  def main(args:Array[String])={
+    println("Program to create map with Rollno and FirstName. Print all student info with same FirstName")
+    val students = Map(12 -> "Daya", 24 -> "Salunkhe", 53 -> "Abhijeet", 42 -> "Salunkhe")
+
+    val firstName = "Salunkhe"
+
+    val sameFirstName = students.filter(s => s._2 == firstName)
+
+    println(s"List: $students")
+    println(s"Students with first name $firstName:")
+    sameFirstName.foreach(s => println(s"Roll number: ${s._1}, First name: ${s._2}"))}
+}

@@ -1,0 +1,15 @@
+//Create two Lists and merge it and store the sorted list in ascending order
+object asdasd{
+  def main(args: Array[String])={
+    val list1 = List(34, 48, 21)
+    val list2 = List(51, 66, 14, 26, 27)
+  
+    val mergedList = list1 ++ list2
+    val sortedList = mergedList.sorted
+  
+    println(s"List 1 : $list1")
+    println(s"List 2 : $list2")
+    println(s"Merged list: $mergedList")
+    println(s"Sorted list: $sortedList")
+  }
+}

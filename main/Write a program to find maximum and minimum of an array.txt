@@ -1,0 +1,48 @@
+//Write a program to find maximum and minimum of an array
+import scala.io.StdIn.readInt
+object asdasd{
+  def main(args: Array[String])={
+    println("Program to find max and min of array(user defined)")
+    println("Enter size of array : ")
+    var size = readInt()
+    var arr = new Array[Int](size)
+
+    for(i<- 0 until size){
+      println("Enter the " + (i+1) + " element : ")
+      arr(i) = readInt()
+    }
+
+    var max = findmax(arr, size)
+    var min = findmin(arr, size)
+
+    println("max element of entered array : " + max)
+    println("min element of entered array : " + min)
+
+  }
+  def findmax(a:Array[Int], b:Int)={
+    var arr = a
+    var max = a(0)
+
+    for(i<-1 until b){
+      if(a(i) > max){
+        var temp = a(i)
+        a(i) = max
+        max = temp
+      }
+    }
+    max
+  }
+  def findmin(a:Array[Int], b:Int)={
+    var arr = a
+    var min = a(0)
+
+    for(i<-1 until b){
+      if(a(i) < min){
+        var temp = a(i)
+        a(i) = min
+        min = temp
+      }
+    }
+    min
+  }
+}

@@ -1,0 +1,19 @@
+//Write a program to merge two sets and calculate product and average of all elements of the set
+object asdasd{
+  def main(args: Array[String])={
+    println("Program to merge two sets and calculate product and average of all elements of the set")
+    val set1 = Set(1, 2, 3)
+    val set2 = Set(3, 4, 5)
+
+    val mergedSet = set1 ++ set2
+
+    val product = mergedSet.product
+
+    val average = mergedSet.sum.toDouble / mergedSet.size
+
+
+    println(s"Merged set: $mergedSet")
+    println(s"Product of all elements: $product")
+    println(s"Average of all elements: $average")
+  }
+}

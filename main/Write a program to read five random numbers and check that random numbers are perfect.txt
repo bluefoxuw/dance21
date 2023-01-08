@@ -1,0 +1,23 @@
+//Write a program to read 5 random numbers and check if they are perfect numbers or not
+import scala.util.Random
+object MyObj{
+  def main(args: Array[String])={
+    println("Program to read/generate 5 random numbers and check if they are perfect numbers or not")
+    var randomnum = for(i<-1 to 5) yield Random.nextInt(1000)
+  
+    randomnum.foreach(n => checkifperfect(n))
+  }
+
+  def checkifperfect(a:Int)={
+    var b = 0
+    var divisors = for(i<- 1 to (a/2) if a%i == 0) yield i
+    var sum = 0
+    for(i<- divisors){
+      sum += i
+    }
+     if(sum == a)
+      println( a + " is a perfect number")
+    else
+      println( a + " is not a perfect number")
+  }
+}

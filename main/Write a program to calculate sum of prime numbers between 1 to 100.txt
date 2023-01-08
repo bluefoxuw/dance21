@@ -1,0 +1,29 @@
+//Write a program to calculate sum of prime numbers between 1 and 100
+object MyObj{
+  def main(args: Array[String])={
+    println("Program to calculate sum of prime numbers between 1 and 100")
+    var primes = for(i<- 1 to 100 if checkprime(i)) yield i
+    var sum = 0
+    for(i<- primes){
+      sum += i
+    }
+    println("the sum of numbers from 1 to 100 is : " + sum)
+  }
+
+  def checkprime(a:Int)={
+    if(a<2){
+      false
+    }
+    else{
+      var isprime = true
+      for(i<-2 to (a/2)){
+        if(a%i == 0){
+          isprime = false
+          isprime
+        }
+      }
+      isprime
+     }
+   }
+}
+

@@ -1,0 +1,17 @@
+//Write a program to read 2 strings from user and to remove the occurence of 2nd string from 1st string
+import scala.io.StdIn.readLine
+
+object Main {
+  def main(args: Array[String])= {
+    println("Program to read 2 strings from user and to remove the occurence of 2nd string from 1st string")
+    print("Enter first string: ")
+    val str1 = readLine()
+
+    print("Enter second string: ")
+    val str2 = readLine()
+
+    val result = str1.replaceAll(str2, "")
+
+    println(s"Result: $result")
+  }
+}

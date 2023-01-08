@@ -1,0 +1,26 @@
+//Define a class Employee(id,name,salary). Define methods accept and display. Display details of employee having max salary
+//Note - The meaning of method acept() was not understood therfore just proceeding forward with display
+class Employee(val id: Int, val name: String, val salary: Double) {
+  def display(): Unit = {
+    println(s"Employee(id = $id, name = $name, salary = $salary)")
+  }
+}
+
+object Main {
+  def main(args: Array[String]): Unit = {
+    println("Program to create class Employee(id,name,salary). Define accept and display. Display details of employee having max salary")
+    println("Note - The meaning of method accept() was not understood therefore just proceeding forward with display")
+    println()
+    println()
+    println("Initializing the list of employees with 3 random employees with random salaries")
+    val employees = List(
+      new Employee(112, "Sukhinder", 100000),
+      new Employee(198, "Manminder", 110000),
+      new Employee(865, "Gurminder", 125000)
+    )
+
+    val highestPaid = employees.maxBy(_.salary)
+    println("Highest paid Employee : ")
+    highestPaid.display()
+  }
+}

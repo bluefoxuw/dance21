@@ -1,0 +1,51 @@
+//Write a program calculate transpose of a matrix
+import scala.io.StdIn.readInt
+object asdasd{
+  def main(args: Array[String])={
+    println("Program to print transpose of a Matrix")
+    println("Enter number of rows : ")
+    var rows = readInt()
+    println("Enter number of column : ")
+    var cols = readInt()
+    var matrix = Array.ofDim[Int](rows,cols)
+    println("Enter the elements of the matrix : ")
+    for(i<- 0 until rows){
+      var r = i
+      for(i<- 0 until cols){
+        println("Enter element : " + (r + 1) + " Row and " + (i + 1) + " Column")
+        matrix(r)(i) = readInt() 
+      }
+    }
+    var transposed = transpose(matrix, rows, cols)
+    println("Entered Matrix")
+    for(i<-0 until rows){
+      var r = i
+      for(i<- 0 until cols){
+        print(matrix(r)(i) + " ")
+      }
+      println()
+    }
+    println("Transpose : ")
+    for(i<- 0 until cols){
+      var r = i
+      for(i<- 0 until rows){
+        print(transposed(r)(i) + " ")
+      }
+      println()
+    }
+  }
+  def transpose(mat:Array[Array[Int]], rows: Int, cols: Int)={
+    var r = rows
+    var c = cols
+
+    var transpose = Array.ofDim[Int](c,r)
+    var matrix = mat
+    for(i<- 0 until r){
+      var x = i
+      for(i<- 0 until c){
+        transpose(i)(x) = matrix(x)(i)
+      }
+    }
+    transpose
+  }
+}

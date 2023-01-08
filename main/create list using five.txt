@@ -1,0 +1,18 @@
+//Create Lists using five different methods(Lisp style, Java style, fill, range and tabulate methods)
+object asdasd{
+  def main(args:Array[String])={
+    println("Program to create Lists using five different methods(Lisp style, Java style, fill, range and tabulate methods) ")
+
+    val lispList = 1 :: 2 :: 3 :: Nil
+    val javaList = List(1,2,3)
+    val fillList = List.fill(3)(1)
+    val rangeList = List.range(1,4)
+    val tabulateList = List.tabulate(3)(n => n+1)
+
+    println(s"Lisp style list: $lispList")
+    println(s"Java style list: $javaList")
+    println(s"fill method list: $fillList")
+    println(s"Range method list: $rangeList")
+    println(s"Tabulate method list: $tabulateList")
+  }
+}

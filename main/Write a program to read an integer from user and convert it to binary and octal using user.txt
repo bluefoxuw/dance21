@@ -1,0 +1,53 @@
+//Write a program to read integer from user and convert it to binary and octal using user defined function
+import scala.io.StdIn.readInt
+object MyObj{
+  def main(args: Array[String])={
+    println("Program to read integer input from user and convert it to its binary and octal representaion")
+    println("Enter decimal")
+    var num = readInt()
+    println("Binary equivalent is : " + binary(num))
+    println("Octal equivalent is : " + octal(num))
+  }
+  def binary(a:Int)={
+    var k = a
+    var size = 0
+    while(k>0){
+      size+=1
+      k=k/2
+    }
+    var b = new Array[Int](size)
+    k=a
+    var i = 0
+    while(k>0){
+      b(i) = k%2
+      k = k/2
+      i += 1
+    }
+    var result = ""
+    for(i<-(b.length - 1) to 0 by -1){
+      result += b(i).toString
+    }
+    result
+  }
+  def octal(a:Int)={
+    var k = a
+    var size = 0
+    while(k>0){
+      size+=1
+      k=k/8
+    }
+    var b = new Array[Int](size)
+    k=a
+    var i = 0
+    while(k>0){
+      b(i) = k%8
+      k = k/8
+      i += 1
+    }
+    var result = ""
+    for(i<-(b.length - 1) to 0 by -1){
+      result += b(i).toString
+    }
+    result
+  }
+}

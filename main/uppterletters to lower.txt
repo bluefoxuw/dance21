@@ -1,0 +1,16 @@
+import scala.io.StdIn.readLine
+
+object Main {
+  def main(args: Array[String])={
+    println("Program to count uppercase letters in input string and display that string after converting all uppercase to lowercase")
+    print("Enter a string: ")
+    val input = readLine()
+
+    val lowercase = input.toLowerCase
+
+    val uppercaseCount = input.count(_.isUpper)
+
+    println(s"Number of uppercase letters: $uppercaseCount")
+    println(s"Lowercase string: $lowercase")
+  }
+}

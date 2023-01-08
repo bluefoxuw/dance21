@@ -1,0 +1,39 @@
+//Create abstract class Order(id,description). Derive 2 classes PurchaseOrder and SalesOrder with members Vendor and Customer. Create object of each purchaseorder and salesorder.Display the details of each account
+abstract class Order(id: Int, description: String) {
+  def displayDetails(): Unit
+}
+
+class PurchaseOrder(id: Int, description: String, vendor: String) extends Order(id, description) {
+  def displayDetails(): Unit = {
+    println(s"Purchase Order:")
+    println(s"ID: $id")
+    println(s"Description: $description")
+    println(s"Vendor: $vendor")
+  }
+}
+
+class SalesOrder(id: Int, description: String, customer: String) extends Order(id, description) {
+  def displayDetails(): Unit = {
+    println(s"Sales Order:")
+    println(s"ID: $id")
+    println(s"Description: $description")
+    println(s"Customer: $customer")
+  }
+}
+object asdasd{
+  def main(args:Array[String])={
+    println("Creating abstract class Order(id,description. Deriving 2 classes PurchaseOder and SalesOrder with members vendor and customer. Create object of each PurchaseOrder and SalesOrder.Display details of each account.)")
+    for(i<-0 until 2) println()
+    val purchase_order1 = PurchaseOrder(1, "Football", "Adidas")
+    val purchase_order2 = PurchaseOrder(2, "Volleyball", "Nivia")
+
+    val sales_order1 = SalesOrder(10, "TV", "Jethalal")
+    val sales_order2 = SalesOrder(5, "Mobile", "Champak Chacha")
+
+    purchase_order1.displayDetails()
+    sales_order1.displayDetails()
+  
+    purchase_order2.displayDetails()
+    sales_order2.displayDetails()
+  }
+}
